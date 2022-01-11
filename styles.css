@@ -1,0 +1,490 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+/*########################### nav ###########################*/
+/* mobile nav */
+#main-head {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  background: orange;
+  color: black;
+  font-style: italic;
+  font-size: 40px;
+  font-weight: bolder;
+}
+#main-head i {
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  background: black;
+}
+
+nav ul li {
+  color: orange;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: orange;
+  text-transform: capitalize;
+  font-size: 20px;
+  display: block;
+  text-align: center;
+  padding: 10px 25px;
+}
+
+nav ul li a:hover {
+  color: white;
+}
+/* end mobile nav */
+
+/* larger nav  */
+@media screen and (min-width: 576px) {
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav ul li {
+    flex: 1 0 auto;
+  }
+
+  #main-head {
+    display: block;
+    text-align: center;
+  }
+  #main-head i {
+    display: none;
+  }
+}
+/* end larger nav */
+/*########################### end nav ###########################*/
+
+/*########################### banner ###########################*/
+#banner {
+  min-height: 90vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("./img/boardroom.jpeg") center/cover no-repeat fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#banner .banner-text {
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+#banner #banner-underline {
+  border-top: black solid 4px;
+  margin: 10px auto 20px auto;
+  width: 200px;
+}
+
+.banner-button button {
+  padding: 5px 10px;
+  background: none;
+  font-size: 30px;
+  color: orange;
+  border: orange solid 3px;
+  margin: 20px;
+}
+
+.banner-button button:hover {
+  color: white;
+  background: orange;
+  cursor: pointer;
+}
+/*########################### end banner ###########################*/
+
+/*########################### skills ###########################*/
+/* mobile skills */
+
+#skills {
+  background: lightgrey;
+  padding: 50px 0;
+}
+
+.skills-container {
+  max-width: 95vw;
+  margin: 0 auto;
+}
+
+.skills-item {
+  margin: 20px 0;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.skills-item i {
+  font-size: 40px;
+}
+
+.skills-item h2 {
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: orange;
+  margin: 10px 0;
+}
+
+.skills-item p {
+  color: white;
+  width: 75%;
+  margin: 0 auto;
+}
+/* end mobile skills */
+
+/* larger skills */
+@media screen and (min-width: 576px) {
+  .skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+  }
+}
+/* end of larger skills */
+/*########################### end of skills ###########################*/
+
+/*########################### services ###########################*/
+/* mobile services */
+#services {
+  min-height: 100vh;
+  padding: 20px;
+  background: url("./img/boardroom.jpeg") center/cover no-repeat fixed;
+}
+
+.title .title-heading {
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.title-underline {
+  border-top: orange solid 3px;
+  width: 150px;
+  margin: 0 auto;
+}
+
+.services-container {
+  max-width: 90vw;
+  margin: 50px auto;
+}
+
+.services-item {
+  width: 75%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  padding: 60px;
+}
+
+.services-item-black {
+  background: black;
+  opacity: 70%;
+  color: white;
+}
+
+.services-item-white {
+  background: white;
+  opacity: 70%;
+  color: black;
+}
+
+.services-item .front-text {
+  text-align: center;
+  transition: ease-in-out 1s;
+}
+
+.services-item .back-text {
+  position: absolute;
+  bottom: -15em;
+  width: 75%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 30px 0;
+  transition: ease-in-out bottom 1s;
+}
+
+.services-item i {
+  font-size: 60px;
+  color: orange;
+  margin-bottom: 20px;
+}
+
+.services-item h2 {
+  font-size: 20px;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.services-item .back-text h3 {
+  margin-bottom: 10px;
+}
+
+.services-item button {
+  color: orange;
+  text-transform: capitalize;
+  padding: 5px 10px;
+  border: orange solid 2px;
+  background: none;
+  margin-top: 10px;
+}
+
+.services-item-black button {
+  color: orange;
+}
+
+.services-item-white button {
+  color: black;
+  background: orange;
+}
+
+.services-item-black button:hover {
+  color: black;
+  background: orange;
+  cursor: pointer;
+}
+
+.services-item-white button:hover {
+  color: orange;
+  border-color: black;
+  background: black;
+  cursor: pointer;
+}
+
+.services-item:hover .front-text {
+  transform: translateY(-200px);
+}
+
+.services-item:hover .back-text {
+  bottom: 0;
+}
+/* end of mobile services */
+
+/* larger services */
+
+@media screen and (min-width: 776px) {
+  .services-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .services-container .services-item:nth-of-type(1) {
+    order: 1;
+  }
+  .services-container .services-item:nth-of-type(2) {
+    order: 2;
+  }
+  .services-container .services-item:nth-of-type(3) {
+    order: 4;
+  }
+  .services-container .services-item:nth-of-type(4) {
+    order: 3;
+  }
+}
+/*########################### end of services ###########################*/
+
+/*########################### projects #############################*/
+/* mobile projects */
+
+#projects {
+  background: lightgrey;
+  padding: 30px 0 50px 0;
+}
+
+#projects .title h1 {
+  color: black;
+}
+
+.projects-container {
+  margin: 20px auto;
+  max-width: 90vw;
+}
+
+.projects-item {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  margin: 20px 0;
+  color: white;
+  overflow: hidden;
+}
+
+.projects-item img {
+  width: 100%;
+  min-height: 100%;
+  display: block;
+  transition: transform 2s;
+}
+
+.projects-item .img-text {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  text-align: center;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+.projects-item .img-text h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.projects-item .img-text h2 {
+  font-size: 15px;
+}
+
+.projects-item .footer-text {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+.projects-item:hover img {
+  opacity: 0.4;
+  transform: scale(1.3);
+}
+
+.projects-item:hover .img-text,
+.projects-item:hover .footer-text {
+  opacity: 1;
+}
+/* end of mobile projects */
+
+/* larger projects */
+@media screen and (min-width: 576px) {
+  .projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+  }
+}
+/* end of larger projects */
+/*########################### end of projects ###########################*/
+
+/*########################### posts ###########################*/
+/* mobile posts */
+#posts {
+  background: url("./img/boardroom.jpeg") center/cover no-repeat fixed;
+  padding: 20px;
+}
+
+.posts-container {
+  max-width: 90vw;
+  margin: 10px auto;
+}
+
+.posts-item {
+  width: 300px;
+  text-align: center;
+  margin: 20px auto;
+  background: black;
+  color: white;
+}
+
+#posts .posts-item img {
+  width: 300px;
+  height: 300px;
+  object-fit: center/cover no-repeat;
+}
+
+#posts .posts-item h2 {
+  color: orange;
+}
+
+#posts .posts-item p {
+  margin: 10px;
+}
+
+#posts .posts-item button {
+  padding: 5px 10px;
+  margin: 20px;
+  border: orange solid 3px;
+  color: orange;
+  background: none;
+}
+
+#posts .posts-item button:hover {
+  color: white;
+  background: orange;
+  cursor: pointer;
+}
+/* end of mobile posts */
+
+/* larger posts */
+@media screen and (min-width: 776px) {
+  .posts-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .posts-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+  }
+}
+/* end of larger posts */
+/*########################### end of posts ###########################*/
+
+footer {
+  color: white;
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer ul {
+  margin: 20px;
+  list-style: none;
+}
+
+.legal {
+  text-align: right;
+}
