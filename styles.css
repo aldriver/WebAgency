@@ -23,6 +23,9 @@ body {
 #main-head i {
   padding: 10px;
 }
+#main-head:hover {
+  cursor: default;
+}
 
 nav ul {
   list-style: none;
